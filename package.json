@@ -1,0 +1,41 @@
+{
+  "name": "loop-now-plugin-figma",
+  "version": "0.1.0",
+  "description": "Let Loop Now Agents read Figma designs through Figma's desktop MCP server: design context and code, screenshots, variables, FigJam boards and Code Connect.",
+  "keywords": [
+    "loop-now-plugin",
+    "pi-package",
+    "figma"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AI-for-anyone/loop-now-plugin-figma.git"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.21.0"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 test/*.test.ts",
+    "validate": "node ../loop-now/plugins/host/dist/main.js validate ."
+  },
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "loopNow": {
+    "id": "figma",
+    "displayName": "Figma",
+    "mcpServers": {
+      "desktop": {
+        "url": "http://127.0.0.1:3845/mcp",
+        "exposure": "direct",
+        "timeout": 120,
+        "description": "Figma 桌面版的本机 MCP 服务器：读取设计稿的代码与设计上下文、图层结构、截图、变量与样式、FigJam 白板，查看和添加 Code Connect 映射；不能改画布。需要 Loop Now 所在机器上开着 Figma 桌面版，并在 Dev Mode 里开启 desktop MCP server。"
+      }
+    }
+  }
+}
