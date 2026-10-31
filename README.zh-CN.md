@@ -1,6 +1,6 @@
 # Loop Now Figma 插件
 
-[English](README.md)
+[English](https://github.com/AI-for-anyone/loop-now-plugin-figma/blob/main/README.md)
 
 一个 [Loop Now](https://github.com/AI-for-anyone/loop-now) 插件：让 Agent 通过 **Figma 桌面版自带的 MCP 服务器** 读取设计稿，包括某个画框或图层的代码与设计上下文、图层结构、截图、颜色间距字体等变量、FigJam 白板，以及 Code Connect 映射。
 
@@ -33,7 +33,7 @@ curl -s -o /dev/null -w '%{http_code}\n' -X POST http://127.0.0.1:3845/mcp \
 
 ## 2. 在 Loop Now 里安装
 
-控制台：**插件 › 安装插件**，来源选 git 仓库，填 `https://github.com/AI-for-anyone/loop-now-plugin-figma.git`；也可以选本地目录，填这个仓库在本机的路径。或者用命令行：
+控制台：**插件市场** › **安装插件**，来源选 **git 仓库**，**仓库地址** 填 `https://github.com/AI-for-anyone/loop-now-plugin-figma.git`；也可以选 **本地目录**，填这个仓库在 Loop Now 那台机器上的绝对路径。或者用命令行：
 
 ```sh
 loopctl plugin install https://github.com/AI-for-anyone/loop-now-plugin-figma.git@main --force
@@ -43,8 +43,8 @@ loopctl plugin install https://github.com/AI-for-anyone/loop-now-plugin-figma.gi
 
 ## 3. 启用并授权给 Agent
 
-1. 项目的 **插件** 页：启用 **Figma**。
-2. Agent 配置的插件一栏：给需要看设计稿的 Agent 授权。
+1. **项目设置** › **插件** › **管理项目插件**：启用 **Figma**。
+2. 需要看设计稿的 Agent，在其配置的 **插件权限** 一栏授权 **Figma** 并保存。
 
 授权后，平台把 MCP 条目写进该 Agent 的 Pi `mcp.json`，条目名为 `figma-desktop`，工具名以 `mcp__figma_desktop__` 开头；Skill 也一并交给 Pi。这些在该 Agent 下次启动 Pi 时生效。
 

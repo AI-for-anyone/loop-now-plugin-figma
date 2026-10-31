@@ -1,6 +1,6 @@
 {
   "name": "loop-now-plugin-figma",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": {
     "zh-CN": "让 Agent 通过 Figma 桌面版的 MCP 服务器读取设计稿：代码与设计上下文、截图、变量、FigJam 白板和 Code Connect。",
     "en-US": "Let Agents read Figma designs through the Figma desktop app's MCP server: design context and code, screenshots, variables, FigJam boards and Code Connect."

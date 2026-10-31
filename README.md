@@ -1,6 +1,6 @@
 # Loop Now for Figma
 
-[中文](README.zh-CN.md)
+[中文](https://github.com/AI-for-anyone/loop-now-plugin-figma/blob/main/README.zh-CN.md)
 
 A [Loop Now](https://github.com/AI-for-anyone/loop-now) plugin that lets Agents read Figma designs through **the MCP server built into the Figma desktop app**. Agents get the code and design context of a frame or layer, the layer structure, screenshots, variables such as colors, spacing and type, FigJam boards, and Code Connect mappings.
 
@@ -33,7 +33,7 @@ curl -s -o /dev/null -w '%{http_code}\n' -X POST http://127.0.0.1:3845/mcp \
 
 ## 2. Install the plugin in Loop Now
 
-The console is in Chinese; the labels it shows are given in parentheses. In the console: **Plugins (插件) › Install plugin (安装插件)**, source git repository, URL `https://github.com/AI-for-anyone/loop-now-plugin-figma.git`. Alternatively, choose a local directory and give the path of this repository on that machine. Or with the CLI:
+In the console: **Plugin market** › **Install plugin**, source **git repository**, **Repository URL** `https://github.com/AI-for-anyone/loop-now-plugin-figma.git`. Alternatively, choose **Local folder** and give the absolute path of this repository on the Loop Now machine. Or with the CLI:
 
 ```sh
 loopctl plugin install https://github.com/AI-for-anyone/loop-now-plugin-figma.git@main --force
@@ -43,8 +43,8 @@ loopctl plugin install https://github.com/AI-for-anyone/loop-now-plugin-figma.gi
 
 ## 3. Enable it and grant it to Agents
 
-1. In the project, **Plugins (插件)**: enable **Figma**.
-2. In each Agent's configuration, plugins section: grant it to the Agents that should read designs.
+1. **Project settings** › **Plugins** › **Manage project plugins**: enable **Figma**.
+2. In the config of each Agent that should read designs, under **Plugin grants**: grant **Figma** and save.
 
 Once granted, the platform writes the MCP entry into that Agent's Pi `mcp.json` as `figma-desktop`, so the tools are named `mcp__figma_desktop__*`, and hands the Skill to Pi. Both take effect the next time the Agent's Pi starts.
 

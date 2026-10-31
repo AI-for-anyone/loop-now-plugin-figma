@@ -116,7 +116,7 @@ describe('清单与 Skill', () => {
   it('只有 Agent 半边：一个 Skill 目录和 Figma 桌面版的 MCP 服务器，没有平台半边与权限', () => {
     const ln = pkg.loopNow
     assert.equal(ln.id, 'figma')
-    assert.equal(pkg.version, '0.1.0')
+    assert.equal(pkg.version, '0.1.1')
     for (const key of ['platform', 'permissions', 'events', 'configSchema', 'accounts', 'bin']) assert.equal(ln[key], undefined, key)
     assert.deepEqual(pkg.pi, { skills: ['./skills'] })
     assert.deepEqual(Object.keys(ln.mcpServers), ['desktop'])
